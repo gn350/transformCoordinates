@@ -18,10 +18,10 @@ def readIn(fileName):
 def modifyContents(contents):
     #we need to remove contents before [[[[ 
     #finding index for those characters
-    startIndex = contents.find('[[[[')
+    startIndex = contents.find('[[[')
 
     #modify the string
-    contents = contents[startIndex+4:-8]
+    contents = contents[startIndex+3:-8]
 
     #find and replace ],[ with new line
     contents = contents.replace("],[", "\n")
